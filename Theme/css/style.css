@@ -512,6 +512,10 @@ About Section
     font-size: 16px;
     text-transform: capitalize;
 }
+.about-content .skill-item a:visited ,.about-content .skill-item a:link {
+    color: #C8C8C8;
+    font-size: 16px;
+}
 /* portfolio section */
 .portfolio-section{
     padding-bottom: 70px;
