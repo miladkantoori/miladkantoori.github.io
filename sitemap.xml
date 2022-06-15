@@ -25,28 +25,4 @@
   <priority>0.9</priority>
   <changefreq>weekly</changefreq>
 </url>
-<url>
-  <loc>http://kantoori.irTheme/img/profile-img.jpg</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://kantoori.irTheme/img/portfolio/1.jpg</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://kantoori.irTheme/img/portfolio/2.jpg</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://kantoori.irTheme/img/portfolio/3.jpg</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://kantoori.irTheme/img/portfolio/4.jpg</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://kantoori.irTheme/img/portfolio/5.jpg</loc>
-  <changefreq>weekly</changefreq>
-</url>
 </urlset>
