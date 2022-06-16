@@ -349,7 +349,30 @@
 <!-- Porrfolio Item Details Popup end -->
  
 <script src="Theme/js/script.js"></script>
-<script src="Theme/js/firebase.js"></script>
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyBnfarlGtBcIoLz4w8Q1r7YGfJ2vB-s4z0",
+    authDomain: "kantoori-ir.firebaseapp.com",
+    projectId: "kantoori-ir",
+    storageBucket: "kantoori-ir.appspot.com",
+    messagingSenderId: "726921116536",
+    appId: "1:726921116536:web:9ac2961f09a7f1feee268d",
+    measurementId: "G-J3H7M1FMWW"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
   
 </body>
 </html>
