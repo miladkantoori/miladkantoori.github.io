@@ -517,10 +517,9 @@ About Section
     font-size: 16px;
 }
 .heart{
-    display: block!important;
     padding-top: 20px;
     text-align: center;
-    color: red;
+    color: #FF0000;
     font-size: 20px;
     filter:drop-shadow(0 0 0 rgba(250,24,24,1));
     animation: 1.3s infinite beat;
