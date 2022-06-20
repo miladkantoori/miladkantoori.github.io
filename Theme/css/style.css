@@ -518,6 +518,7 @@ About Section
 }
 .heart{
     display: block!important;
+    padding-top: 20px;
     text-align: center;
     color: red;
     font-size: 20px;
