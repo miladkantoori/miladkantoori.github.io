@@ -13,12 +13,12 @@ body{
     font-weight: 300;
     background-color: #1B2430;
     direction: rtl;
+    margin: 0;
 }
 
 .container{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     text-align: center;
     height: 100%;
     margin: 0;
