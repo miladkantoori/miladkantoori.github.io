@@ -8,16 +8,17 @@
 }
 
 body{
+    width: 840px;
+    height: 640px;
     font-family: 'Vazir', Helvetica, Arial, sans-serif;
     font-size: 17px;
     font-weight: 300;
     background-color: #1B2430;
     direction: rtl;
+    margin: 0 auto;
 }
 
 .container {
-    width: 800px;
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
