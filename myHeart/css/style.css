@@ -17,7 +17,6 @@ body{
 
 .container {
     width: 800px;
-    /* Change this value to customize the content area*/
     margin: 0 auto;
     display: flex;
     flex-direction: column;
