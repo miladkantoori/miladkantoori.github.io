@@ -7,9 +7,6 @@
   src: local('../fonts/Vazir'), url('../fonts/Vazir.woff') format('woff'), url('../fonts/Vazir.ttf') format('truetype');
 }
 
-html,body{
-    height: 99%;
-}
 
 body{
     font-family: 'Vazir', Helvetica, Arial, sans-serif;
