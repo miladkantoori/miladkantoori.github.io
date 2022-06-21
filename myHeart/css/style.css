@@ -1,0 +1,93 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face {
+  font-family: 'Vazir';
+  src: url('../fonts/Vazir.eot');
+  src: local('../fonts/Vazir'), url('../fonts/Vazir.woff') format('woff'), url('../fonts/Vazir.ttf') format('truetype');
+}
+
+html,body{
+    height: 99%;
+}
+
+body{
+    font-family: 'Vazir', Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    font-weight: 300;
+    background-color: #1B2430;
+    direction: rtl;
+    margin: 0;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.container img{
+    width: 150px;
+    height: 150px;
+    border: 7px solid #FAA500;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.date h2{
+    color: #FAA500;
+}
+
+.date div{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 220px;
+    border: 2px dashed #FAA500;
+    border-radius: 15px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.date a{
+    color: #FFF;
+    font-size: 20px;
+}
+
+.pos{
+    color: #FAA500;
+    font-size: 20px;
+}
+
+.tEnd{
+    margin-top: 20px;
+}
+
+.tEnd a{
+    color: #FAA500;
+    font-size: 20px;
+}
+
+.heart{
+    padding-top: 3%;
+    color: #FF0000;
+    font-size: 20px;
+    filter: drop-shadow(0 0 0 rgba(250,24,24,1));
+    animation: 1.3s infinite beat;
+}
+
+@keyframes beat{
+    to{
+        filter: drop-shadow(0 0 75px rgba(250,24,24,0));
+    }
+}
+
+
+
+
+
