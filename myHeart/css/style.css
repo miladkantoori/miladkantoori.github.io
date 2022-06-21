@@ -7,25 +7,28 @@
   src: local('../fonts/Vazir'), url('../fonts/Vazir.woff') format('woff'), url('../fonts/Vazir.ttf') format('truetype');
 }
 
+html,body{
+    height: 99%;
+}
+
 body{
-    width: 840px;
-    height: 640px;
     font-family: 'Vazir', Helvetica, Arial, sans-serif;
     font-size: 17px;
     font-weight: 300;
     background-color: #1B2430;
     direction: rtl;
-    margin: 0 auto;
+    margin: 0;
 }
 
-.container {
+.container{
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    height: 100%;
     padding: 0;
+    margin: 0;
 }
-
 
 .container img{
     width: 150px;
@@ -44,7 +47,7 @@ body{
 .date div{
     margin-left: auto;
     margin-right: auto;
-    max-width: 80%;
+    max-width: 220px;
     border: 2px dashed #FAA500;
     border-radius: 15px;
     padding: 10px;
@@ -75,7 +78,7 @@ body{
     color: #FF0000;
     font-size: 20px;
     filter: drop-shadow(0 0 0 rgba(250,24,24,1));
-    animation: 1.1s infinite beat;
+    animation: 1.3s infinite beat;
 }
 
 @keyframes beat{
