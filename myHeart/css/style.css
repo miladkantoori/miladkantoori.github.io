@@ -7,17 +7,12 @@
   src: local('../fonts/Vazir'), url('../fonts/Vazir.woff') format('woff'), url('../fonts/Vazir.ttf') format('truetype');
 }
 
-html,body{
-    height: 99%;
-}
-
 body{
     font-family: 'Vazir', Helvetica, Arial, sans-serif;
     font-size: 17px;
     font-weight: 300;
     background-color: #1B2430;
     direction: rtl;
-    margin: 0;
 }
 
 .container{
@@ -26,7 +21,6 @@ body{
     justify-content: center;
     text-align: center;
     height: 100%;
-    padding: 0;
     margin: 0;
 }
 
