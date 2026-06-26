@@ -1,23 +1,20 @@
-/*---------------- Page Loader ----------------------*/
 window.addEventListener("load", () => {
     document.querySelector(".page-loader").classList.add("slide-out-right");
     setTimeout(() => {
         document.querySelector(".page-loader").style.display = "none";
-    }, 1000);
+    }, 1100);
+    initScrollReveal();
 });
 
-/*----------------------------- Toggle Navbar ----------------------------------*/
 const navToggler = document.querySelector(".nav-toggler");
 navToggler.addEventListener("click", toggleNavbar);
 
-function toggleNavbar(){
+function toggleNavbar() {
     navToggler.classList.toggle("active");
     document.querySelector(".nav").classList.toggle("open");
     toggleOverlayEffect();
     toggleBodyScrolling();
 }
-
-/*---------------------------- Hide & Show Section ------------------------------*/
 
 document.addEventListener("click", (e) => {
     if(e.target.classList.contains("link-item") && e.target.hash !== ""){
@@ -46,17 +43,14 @@ function activeSection(sectionId){
     window.scrollTo(0,0);
 }
 
-/*----------------------------- Toggle Overlay Effect ----------------------------*/
 function toggleOverlayEffect(){
     document.querySelector(".overlay-effect").classList.toggle("active");
 }
 
-/*----------------------------- Toggle Body Scrolling ----------------------------*/
 function toggleBodyScrolling(){
     document.body.classList.toggle("hide-scrolling");
 }
 
-/*----------------------------------- Filter portfolio Items ---------------------- */
 const filterBtnsContainer = document.querySelector(".portfolio-filter");
 let portfolioItems;
 filterBtnsContainer.addEventListener("click", (e) =>{
@@ -90,10 +84,9 @@ function filterItems(filterBtn){
     });
     portfolioItems = document.querySelectorAll(".portfolio-item.show");
 }
-// Filter Active Category Portfolio Items
+
 filterItems(document.querySelector(".portfolio-filter-btn.active"));
 
-/*--------------------------- Portofilo Item Details Popup --------------------------*/
 let portfolioItemIndex;
 document.addEventListener("click", (e) => {
     if(e.target.closest(".portfolio-item")){
@@ -172,10 +165,25 @@ function changePortfolioItem(direction){
     },1000);
 }
 
-/*-------------------------Toggle Contact Form ------------------*/
 document.addEventListener("click", (e) => {
     if(e.target.classList.contains("toggle-contact-form-btn")){
         document.querySelector(".contact-form").classList.toggle("open");
         toggleBodyScrolling();
     }
 });
+
+function initScrollReveal() {
+    const revealElements = document.querySelectorAll(".reveal");
+    if (revealElements.length === 0) return;
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.15, rootMargin: "0px 0px -50px 0px" });
+
+    revealElements.forEach(el => observer.observe(el));
+}

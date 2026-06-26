@@ -1,6 +1,6 @@
 {
   "short_name": "Milad Kantoori",
-  "name": "Milad Kantoori",
+  "name": "Milad Kantoori | Portfolio",
   "icons": [
     {
       "src": "favicon.ico",
@@ -10,6 +10,6 @@
   ],
   "start_url": "./index.html",
   "display": "standalone",
-  "theme_color": "#1b1b22",
-  "background_color": "#1b1b22"
+  "theme_color": "#08080f",
+  "background_color": "#08080f"
 }

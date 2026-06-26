@@ -35,3 +35,4 @@ User-agent: *
 Disallow: 
 Disallow: /cgi-bin/
 Sitemap: https://kantoori.ir/sitemap.xml
+Host: https://kantoori.ir
