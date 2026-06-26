@@ -1,24 +1,10 @@
-
+/*---------------- Page Loader ----------------------*/
 window.addEventListener("load", () => {
-    /*---------------- Page Loader ----------------------*/
     document.querySelector(".page-loader").classList.add("slide-out-right");
     setTimeout(() => {
         document.querySelector(".page-loader").style.display = "none";
     }, 1000);
 });
-
-/*-------------------- Bg Animation Effect ----------------*/
-function bgAnimationItems(){
-    const rows = 7, cols = 10;
-    for(let i = 0; i < rows; i++){
-        for(let j = 0; j < cols; j++){
-            const div = document.createElement("div");
-            div.className = 'col-${j+1}';
-            document.querySelector(".bg-animation-effect").appendChild(div);
-        }
-    }
-}
-bgAnimationItems();
 
 /*----------------------------- Toggle Navbar ----------------------------------*/
 const navToggler = document.querySelector(".nav-toggler");
@@ -60,11 +46,11 @@ function activeSection(sectionId){
     window.scrollTo(0,0);
 }
 
-
 /*----------------------------- Toggle Overlay Effect ----------------------------*/
 function toggleOverlayEffect(){
     document.querySelector(".overlay-effect").classList.toggle("active");
 }
+
 /*----------------------------- Toggle Body Scrolling ----------------------------*/
 function toggleBodyScrolling(){
     document.body.classList.toggle("hide-scrolling");
@@ -107,7 +93,7 @@ function filterItems(filterBtn){
 // Filter Active Category Portfolio Items
 filterItems(document.querySelector(".portfolio-filter-btn.active"));
 
-/*--------------------------- Portofilo Item Details Popuo --------------------------*/
+/*--------------------------- Portofilo Item Details Popup --------------------------*/
 let portfolioItemIndex;
 document.addEventListener("click", (e) => {
     if(e.target.closest(".portfolio-item")){
@@ -134,8 +120,8 @@ function portfolioItemDetails(){
 
     document.querySelector(".pp-body").innerHTML =
     portfolioItems[portfolioItemIndex].querySelector(".portfolio-item-details").innerHTML;
-
 }
+
 function updateNextPrevItem(){
     if(portfolioItemIndex !== 0){
         document.querySelector(".pp-footer-right").classList.remove("hidden");
@@ -177,14 +163,15 @@ function changePortfolioItem(direction){
     }
     document.querySelector(".pp-overlay").classList.add(direction);
     setTimeout(() => {
-             document.querySelector(".pp-inner").scrollTo(0,0);
-            portfolioItemDetails();
-            updateNextPrevItem();
+        document.querySelector(".pp-inner").scrollTo(0,0);
+        portfolioItemDetails();
+        updateNextPrevItem();
     },400);
     setTimeout(() => {
         document.querySelector(".pp-overlay").classList.remove(direction);
     },1000);
 }
+
 /*-------------------------Toggle Contact Form ------------------*/
 document.addEventListener("click", (e) => {
     if(e.target.classList.contains("toggle-contact-form-btn")){
