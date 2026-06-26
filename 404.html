@@ -1,42 +1,262 @@
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="fa" dir="rtl">
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="theme-color" content="#0a0a12">
-	<title>صفحه مورد نظر پیدا نشد - Milad Kantoori</title>
-	<link type="text/css" href="Theme/css/404.css" rel="stylesheet" />
-	<style>
-		body { background: #08080f; background-image: radial-gradient(ellipse at 20% 50%, rgba(233,139,44,0.08) 0%, transparent 50%), radial-gradient(ellipse at 80% 20%, rgba(124,92,252,0.05) 0%, transparent 50%); }
-		.btn-go-home { border-color: #e98b2c; color: #e98b2c; }
-		.btn-go-home:hover { background: #e98b2c; color: #fff; }
-		.stars { background-image: radial-gradient(2px 2px at 20px 30px, #eee, transparent), radial-gradient(2px 2px at 40px 70px, rgba(255,255,255,0.8), transparent), radial-gradient(2px 2px at 50px 160px, #ddd, transparent), radial-gradient(2px 2px at 90px 40px, rgba(255,255,255,0.6), transparent), radial-gradient(2px 2px at 130px 80px, #fff, transparent), radial-gradient(2px 2px at 160px 120px, rgba(255,255,255,0.7), transparent); background-size: 200px 200px; }
-	</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحه مورد نظر پیدا نشد - Milad Kantoori</title>
+    <meta name="theme-color" content="#07070d">
+    <meta name="robots" content="noindex, follow">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --bg-primary: #07070d;
+            --bg-secondary: #0d0d1a;
+            --accent-purple: #6C63FF;
+            --accent-cyan: #00D4FF;
+            --accent-gold: #FFD700;
+            --accent-pink: #FF6B9D;
+            --text-primary: #f0f0f5;
+            --text-secondary: rgba(240, 240, 245, 0.7);
+            --text-muted: rgba(240, 240, 245, 0.4);
+            --gradient-1: linear-gradient(135deg, #6C63FF, #00D4FF);
+            --font-primary: 'Vazirmatn', sans-serif;
+            --font-secondary: 'Inter', sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: var(--font-primary);
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+            direction: rtl;
+        }
+
+        #error-particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(ellipse at center, transparent 0%, var(--bg-primary) 80%);
+            z-index: 1;
+        }
+
+        .container {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 24px;
+            max-width: 600px;
+        }
+
+        .error-code {
+            font-family: var(--font-secondary);
+            font-size: 10rem;
+            font-weight: 900;
+            line-height: 1;
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: floatCode 3s ease-in-out infinite;
+            margin-bottom: 16px;
+        }
+
+        @keyframes floatCode {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-12px); }
+        }
+
+        .error-title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+        }
+
+        .error-desc {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            line-height: 2;
+            margin-bottom: 40px;
+        }
+
+        .error-actions {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-family: var(--font-primary);
+            font-size: 0.95rem;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background: var(--gradient-1);
+            color: white;
+            box-shadow: 0 4px 25px rgba(108, 99, 255, 0.3);
+        }
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 40px rgba(108, 99, 255, 0.45);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-primary);
+            border: 1.5px solid rgba(255, 255, 255, 0.08);
+        }
+        .btn-secondary:hover {
+            border-color: var(--accent-cyan);
+            background: rgba(0, 212, 255, 0.08);
+            transform: translateY(-3px);
+        }
+
+        .astronaut {
+            display: inline-block;
+            margin-bottom: 24px;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            33% { transform: translateY(-15px) rotate(-3deg); }
+            66% { transform: translateY(-5px) rotate(3deg); }
+        }
+
+        .astronaut svg {
+            width: 120px;
+            height: 120px;
+            filter: drop-shadow(0 0 30px rgba(108, 99, 255, 0.3));
+        }
+
+        .stars-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .star {
+            position: absolute;
+            border-radius: 50%;
+            background: white;
+            animation: twinkle var(--duration) ease-in-out infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: var(--min-opacity); transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.5); }
+        }
+
+        @media (max-width: 480px) {
+            .error-code { font-size: 6rem; }
+            .error-title { font-size: 1.3rem; }
+            .error-actions { flex-direction: column; align-items: center; }
+            .astronaut svg { width: 80px; height: 80px; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .error-code, .astronaut, .star { animation: none !important; }
+        }
+    </style>
 </head>
 <body>
-	<div class="stars">
-		<div class="central-body">
-			<img class="image-404" src="Theme/img/404.png" width="300px" alt="404">
-			<a href="./" class="btn-go-home">بازگشت به صفحه اصلی</a>
-		</div>
-		<div class="objects">
-			<img class="object_rocket" src="Theme/img/rocket.svg" width="40px" alt="">
-			<div class="earth-moon">
-				<img class="object_earth" src="Theme/img/earth.svg" width="100px" alt="">
-				<img class="object_moon" src="Theme/img/moon.svg" width="80px" alt="">
-			</div>
-			<div class="box_astronaut">
-				<img class="object_astronaut" src="Theme/img/astronaut.svg" width="140px" alt="">
-			</div>
-		</div>
-		<div class="glowing_stars">
-			<div class="star"></div>
-			<div class="star"></div>
-			<div class="star"></div>
-			<div class="star"></div>
-			<div class="star"></div>
-		</div>
-	</div>
+    <div class="stars-container" id="starsContainer"></div>
+    <div class="overlay"></div>
+
+    <div class="container">
+        <div class="astronaut">
+            <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="60" cy="50" r="30" fill="url(#astronautGrad)" opacity="0.2"/>
+                <circle cx="60" cy="50" r="24" fill="url(#astronautGrad)" opacity="0.4"/>
+                <circle cx="60" cy="50" r="18" fill="url(#astronautGrad)"/>
+                <circle cx="52" cy="46" r="3" fill="#fff" opacity="0.9"/>
+                <circle cx="68" cy="46" r="3" fill="#fff" opacity="0.9"/>
+                <path d="M55 56 Q60 62 65 56" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/>
+                <defs>
+                    <linearGradient id="astronautGrad" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0%" stop-color="#6C63FF"/>
+                        <stop offset="100%" stop-color="#00D4FF"/>
+                    </linearGradient>
+                </defs>
+            </svg>
+        </div>
+
+        <div class="error-code">404</div>
+        <h1 class="error-title">صفحه مورد نظر پیدا نشد!</h1>
+        <p class="error-desc">
+            متأسفانه صفحه‌ای که به دنبال آن هستید وجود ندارد یا به مکان دیگری منتقل شده است.
+            <br>
+            ممکن است نشانی اینترنت اشتباه وارد شده باشد.
+        </p>
+        <div class="error-actions">
+            <a href="index.html" class="btn btn-primary">
+                <i class="fas fa-home"></i>
+                بازگشت به صفحه اصلی
+            </a>
+            <a href="index.html#contact" class="btn btn-secondary">
+                <i class="fas fa-envelope"></i>
+                تماس با من
+            </a>
+        </div>
+    </div>
+
+    <script>
+        (function() {
+            var container = document.getElementById('starsContainer');
+            if (!container) return;
+
+            var count = 150;
+            for (var i = 0; i < count; i++) {
+                var star = document.createElement('div');
+                star.className = 'star';
+                var size = 1 + Math.random() * 3;
+                star.style.width = size + 'px';
+                star.style.height = size + 'px';
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.setProperty('--duration', (2 + Math.random() * 4) + 's');
+                star.style.setProperty('--min-opacity', (0.1 + Math.random() * 0.4));
+                star.style.animationDelay = Math.random() * 4 + 's';
+                container.appendChild(star);
+            }
+        })();
+    </script>
 </body>
 </html>
